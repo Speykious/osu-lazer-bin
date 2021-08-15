@@ -1,7 +1,8 @@
 [Desktop Entry]
 Type=Application
 Name=osu!lazer
-Icon=/usr/share/pixmaps/osu-lazer.png
+Icon=osu-lazer
+GenericName=Rhythm Game
 Comment=Open source free-to-win rhythm game
-Exec=/usr/bin/osu-lazer
+Exec=osu-lazer
 Categories=Game;

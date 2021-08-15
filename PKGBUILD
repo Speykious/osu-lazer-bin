@@ -28,8 +28,7 @@ noextract=("$pkgname-$_pkgver.AppImage")
 sha256sums=(`cat osu_sha256sum`
             "36f73cfe0a84cd65a8bb54fcde5a01c419b134bee4a88cc92eb4f33236343a10"
             "30b914824784b6ba6b30a44b22bea4f3c6fbc10f3f0e74fde5ca76a92ef57244"
-            "026a1db53b94cea60d30079e0050140096e3d1ef9b2a2035d8acafa04d9519d5")
-
+            "0887ee7e6594abd1c067597316fdbaa8344077e23c4507258ef11ddf7c17cd09")
 package() {
 	 # Install image
 	 install -Dm644 "$srcdir/$pkgname.png" "$pkgdir/usr/share/pixmaps/osu-lazer.png"
