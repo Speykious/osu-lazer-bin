@@ -20,7 +20,7 @@ fi
 
 echo -e "$col2 Update required from $YEL$current$C to $GRN$latest$C"
 echo -e "$col2 Downloading latest $B${OSU}osu!lazer$C archive..."
-appimage="osu-lazer-bin-$latest.AppImage"
+appimage="osu-lazerious-$latest.AppImage"
 curl "$osu_url/releases/download/$latest/osu.AppImage" -Lo "$appimage"
 
 echo -e "$col2 Writing current version and sha256sum..."

@@ -1,6 +1,6 @@
 ## Maintainer: Speykious <speykious@gmail.com>
 
-pkgname=osu-lazer-bin
+pkgname=osu-lazerious
 _pkgver=`cat current_version`
 pkgver=`echo "$_pkgver" | tr '\\:/\- ' '_'`
 pkgrel=1
