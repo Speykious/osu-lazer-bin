@@ -14,7 +14,7 @@ echo -e "$col2 Getting latest version..." >/dev/stderr
 latest=`basename $(curl -Ls -o /dev/null -w %{url_effective} "$osu_url/releases/latest")`
 
 if [ "$current" = "$latest" ] && [ "$1" != "-f" ]; then
-  echo "$col2 Current $GRN$current$C is latest, no update required" >/dev/stderr
+  echo -e "$col2 Current $GRN$current$C is latest, no update required" >/dev/stderr
   exit 1
 fi
 

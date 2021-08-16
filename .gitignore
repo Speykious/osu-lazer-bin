@@ -1,3 +1,5 @@
-/osu-lazer-bin*
+/*.AppImage
+/*.tar
+/*.tar.*
 /pkg/
 /src/
