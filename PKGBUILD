@@ -8,35 +8,27 @@ pkgdesc="The future of osu! and the beginning of an open era! Commonly known by 
 arch=('x86_64')
 url="https://osu.ppy.sh"
 license=('MIT' 'custom:CC-BY-NC 4.0')
-groups=()
-depends=(ffmpeg zlib libgl sdl2 fuse2 dotnet-runtime)
-makedepends=()
-checkdepends=()
-optdepends=()
+depends=(ffmpeg zlib libgl sdl2 fuse2)
 provides=(osu-lazer)
 conflicts=(osu-lazer)
-replaces=()
-backup=()
 options=(!strip)
-install=
-changelog=
 source=("$pkgname-$_pkgver.AppImage::https://github.com/ppy/osu/releases/download/$_pkgver/osu.AppImage"
         "$pkgname.png::https://raw.githubusercontent.com/ppy/osu/master/assets/lazer.png"
         "$pkgname-LICENCE.md::https://raw.githubusercontent.com/ppy/osu-resources/master/LICENCE.md"
         "$pkgname.xml"
         "$pkgname.desktop")
 noextract=("$pkgname-$_pkgver.AppImage")
-sha256sums=(`cat osu_sha256sum`
-            "36f73cfe0a84cd65a8bb54fcde5a01c419b134bee4a88cc92eb4f33236343a10"
-            "30b914824784b6ba6b30a44b22bea4f3c6fbc10f3f0e74fde5ca76a92ef57244"
-            "fa5c5ebf1546e855103db2f97721448cb60c3cdf85c370e266c8a6eb0094e1b5"
-            "e068ca802b6ecde56d2e72b43830ed625f2a3f8d834a2d9ab3e84de6f4916d96")
+sha256sums=('07d7f3303f6d613bf83bd709405c01f2902194b8b96ff895126945bff10ec0f7'
+            '36f73cfe0a84cd65a8bb54fcde5a01c419b134bee4a88cc92eb4f33236343a10'
+            '30b914824784b6ba6b30a44b22bea4f3c6fbc10f3f0e74fde5ca76a92ef57244'
+            'fa5c5ebf1546e855103db2f97721448cb60c3cdf85c370e266c8a6eb0094e1b5'
+            'e068ca802b6ecde56d2e72b43830ed625f2a3f8d834a2d9ab3e84de6f4916d96')
 
 package() {
 	# Install image
 	install -Dm644 "$pkgname.png" "$pkgdir/usr/share/pixmaps/osu-lazer.png"
 
-  # Install mime types
+    # Install mime types
 	install -Dm644 "$pkgname.xml" "$pkgdir/usr/share/mime/packages/osu-lazer.xml"
 
 	# Install license
