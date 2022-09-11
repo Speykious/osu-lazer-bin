@@ -13,6 +13,7 @@ latest=`basename $(curl -Ls -o /dev/null -w %{url_effective} "$url/releases/late
 
 if [ "$current" = "$latest" ] && [ "$1" != "-f" ]; then
     echo -e "$col2 Current $GRN$current$C is latest, no update required" >/dev/stderr
+    exit
 else
     echo -e "$col2 Changing current version from $YEL$current$C to $GRN$latest$C"
     echo "$latest" > current_version
@@ -23,5 +24,14 @@ makepkg --printsrcinfo > .SRCINFO
 
 echo -e "$col2 Updating checksums..."
 updpkgsums
+
+echo -e "$col2 Making and installing new package..."
+makepkg -si
+
+echo -e "$col2 Bump version in git history..."
+git commit -am "Bump to version $latest"
+
+echo -e "$col2 Pushing new commit..."
+git push
 
 echo -e "$col2 Done"
