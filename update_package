@@ -6,6 +6,8 @@ YEL="\x1b[33m"
 BLU="\x1b[34m"
 col2="$BLU::$C"
 
+touch current_version
+
 if [ "$1" != "--skip-dl" ]; then
     url=https://github.com/ppy/osu
     current=$(cat current_version)
