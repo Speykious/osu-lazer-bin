@@ -36,4 +36,18 @@ makepkg --printsrcinfo > .SRCINFO
 echo -e "$col2 Making and installing new package..."
 makepkg -si
 
+if [ "$(git config --global user.email)" == "speykious@gmail.com" ]; then
+    echo -e "$col2 Bump version in git history..."
+
+    if [ "$1" != "--skip-dl" ]; then
+        git commit -am "Bump to version $latest"
+    else
+        # we write the commit message ourselves
+        git commit -a
+    fi
+
+    echo -e "$col2 Pushing new commit..."
+    git push
+fi
+
 echo -e "$col2 Done"
