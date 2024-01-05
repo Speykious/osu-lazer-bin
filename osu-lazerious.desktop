@@ -1,10 +1,18 @@
 [Desktop Entry]
-Type=Application
-Name=osu!lazer
-Icon=osu-lazer
-GenericName=Rhythm Game
-Comment=Open source free-to-win rhythm game
-Exec=osu-lazer %F
-Terminal=false
-MimeType=application/x-osu-storyboard;application/x-osu-skin-archive;application/x-osu-replay;application/x-osu-beatmap;x-osu-beatmap-archive;
 Categories=Game;
+Comment[en_US]=Open source free-to-win rhythm game
+Comment=Open source free-to-win rhythm game
+Exec=env DRI_PRIME=1 osu-lazer %F
+GenericName[en_US]=Rhythm Game
+GenericName=Rhythm Game
+Icon=osu-lazer
+MimeType=application/x-osu-storyboard;application/x-osu-skin-archive;application/x-osu-replay;application/x-osu-beatmap;
+Name[en_US]=osu!lazer
+Name=osu!lazer
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
