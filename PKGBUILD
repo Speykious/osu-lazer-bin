@@ -18,11 +18,11 @@ source=("$pkgname-$_pkgver.AppImage::https://github.com/ppy/osu/releases/downloa
         "$pkgname.xml"
         "$pkgname.desktop")
 noextract=("$pkgname-$_pkgver.AppImage")
-sha256sums=('04e7b8da32305414991744ff4ccbce4ddbb6b107b5f63a4097c5a4ab2663cbc5'
+sha256sums=('a554c872f781dc42efb286a9d32f2323e0db5e2a9ba750f4d18baa175ab69476'
             '36f73cfe0a84cd65a8bb54fcde5a01c419b134bee4a88cc92eb4f33236343a10'
             '30b914824784b6ba6b30a44b22bea4f3c6fbc10f3f0e74fde5ca76a92ef57244'
             'fa5c5ebf1546e855103db2f97721448cb60c3cdf85c370e266c8a6eb0094e1b5'
-            'e068ca802b6ecde56d2e72b43830ed625f2a3f8d834a2d9ab3e84de6f4916d96')
+            'af516b1ba81aa2203d0655a2721d3bd71ea79ef976bb6008def2ae69a9efd3e8')
 
 package() {
 	# Install image
