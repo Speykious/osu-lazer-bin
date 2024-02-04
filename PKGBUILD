@@ -19,7 +19,7 @@ source=("$pkgname-$_pkgver.AppImage::https://github.com/ppy/osu/releases/downloa
         "$pkgname.desktop")
 noextract=("$pkgname-$_pkgver.AppImage")
 sha256sums=('68d1bab3de368932b2bccd57a2532a98cb3c5f1a11602fd975d082265d0eb531'
-            '36f73cfe0a84cd65a8bb54fcde5a01c419b134bee4a88cc92eb4f33236343a10'
+            '3f574852464af31f21a9b24d5918668f990dfd7af32cc1218b7de9cdeab59155'
             '30b914824784b6ba6b30a44b22bea4f3c6fbc10f3f0e74fde5ca76a92ef57244'
             'fa5c5ebf1546e855103db2f97721448cb60c3cdf85c370e266c8a6eb0094e1b5'
             'af516b1ba81aa2203d0655a2721d3bd71ea79ef976bb6008def2ae69a9efd3e8')
